@@ -1,0 +1,19 @@
+import click
+
+@click.group()
+def cli1():
+    pass
+
+
+
+@cli1.command("add")
+@click.option("--first1")
+@click.option("--second1")
+def add(first1, second1):
+   
+    click.echo(first1 + second1)
+
+
+if __name__ == '__main__':
+    cli1()
+    
